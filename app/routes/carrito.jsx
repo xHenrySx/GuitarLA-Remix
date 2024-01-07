@@ -19,6 +19,24 @@
     ];
   }
 
+  const TempComponent = () => {
+    return (
+      <div className="contenedor">
+        <h1 className="heading">Carrito de Compras</h1>
+        <div className="contenido">
+          <div className="carrito">
+            <h2>Articulos</h2>
+            <p>No hay articulos en el carrito</p>
+          </div>
+          <aside className="resumen">
+            <h3>Resumen del Pedido</h3>
+            <p>Total a pagar: $0</p>
+          </aside>
+        </div>
+      </div>
+    );
+  }
+
   const Carrito = () => {
     const [total, setTotal] = useState(0);
     const { carrito, actualizarCantidad, eliminarGuitarra } = useOutletContext();
@@ -32,7 +50,7 @@
     }, [carrito]);
 
     return (
-      <ClientOnly fallback={"Cargando..."}>
+      <ClientOnly fallback={<TempComponent />}>
         {() => (
           <main className="contenedor">
             <h1 className="heading">Carrito de Compras</h1>
