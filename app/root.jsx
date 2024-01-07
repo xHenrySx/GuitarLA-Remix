@@ -53,7 +53,7 @@ function App() {
       ? JSON.parse(localStorage.getItem("carrito")) ?? []
       : [];
   const [carrito, setCarrito] = useState(carritoLS);
-
+  const value
   useEffect(() => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
   }, [carrito]);
