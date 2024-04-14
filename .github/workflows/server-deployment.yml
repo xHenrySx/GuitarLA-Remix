@@ -27,8 +27,8 @@ jobs:
           script: |
             cd /var/www/guitarla
             git pull origin master
-            ${{ secrets.NODE_BIN }} npm install
-            ${{ secrets.NODE_BIN }} npm run build
-            ${{ secrets.NODE_BIN }} pm2 restart guitarla
+            ${{ secrets.NODE_BIN }}npm install
+            ${{ secrets.NODE_BIN }}npm run build
+            ${{ secrets.NODE_BIN }}pm2 restart guitarla
             
         
