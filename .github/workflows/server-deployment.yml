@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Use node.js 18.20.2 and npm 10.5.2
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.20.2'
+
       - name: Checkout code
         uses: actions/checkout@v2
 
