@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_SECRET_KEY }}
           script: |
-            cd /var/www/html/guitarla
+            cd /var/www/guitarla
             git pull origin master
             npm install
             npm run build
