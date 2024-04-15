@@ -15,6 +15,10 @@ jobs:
         with:
           node-version: '18.20.2'
 
+      - name: Use pm2
+        run: npm install pm2 -g
+        
+
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -29,4 +33,5 @@ jobs:
             git pull origin master
             npm install
             npm run build
-            pm2 restart guitarla
+            pm2 stop guitarla
+            pm2 start guitarla
