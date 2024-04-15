@@ -33,5 +33,3 @@ jobs:
             git pull origin master
             npm install
             npm run build
-            pm2 delete "guitarla" || true
-            pm2 start npm --name "guitarla2" -- start --ignore "build/**/*.map"
