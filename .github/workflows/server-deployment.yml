@@ -17,7 +17,7 @@ jobs:
 
       - name: Use pm2
         run: npm install pm2 -g
-        
+
 
       - name: Checkout code
         uses: actions/checkout@v2
@@ -33,5 +33,5 @@ jobs:
             git pull origin master
             npm install
             npm run build
-            pm2 stop guitarla
-            pm2 start guitarla
+            pm2 delete "guitarla" || true
+            pm2 start npm --name "guitarla2" -- start --ignore "build/**/*.map"
