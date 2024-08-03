@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+// import dotenv from "dotenv";
 import {
   Meta,
   Links,
@@ -13,6 +14,7 @@ import styles from "~/styles/index.css";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
 import PropTypes from "prop-types";
+// dotenv.config()
 export function meta() {
   return [
     { charset: "utf-8" },
